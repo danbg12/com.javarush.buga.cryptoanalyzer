@@ -28,11 +28,20 @@ public class BrutForce {
             }
 
             // Show to user decryption text result in array and it is successful run DecryptedTextOutput method.
-            // If it is unsuccessful we run the method one more time with the next key until the user receives
+            // If it is unsuccessful we run the method one more time with the next key until the user receives Arrays.toString(decryptedText));
             // successful decrypted text file .
             Scanner scanner = new Scanner(System.in);
+            char[] firstTry = new char[30];
 
-            System.out.println(TextsForValidation.DECRYPTION_RESULT + keyValue + "\n" + Arrays.toString(decryptedText));
+            if (decryptedText.length > firstTry.length) {
+                for (int i = 0; i < firstTry.length; i++) {
+                    firstTry[i] = decryptedText[i];
+                }
+                System.out.println(TextsForValidation.DECRYPTION_RESULT + keyValue + "\n" + Arrays.toString(firstTry));
+            } else {
+                System.out.println(TextsForValidation.DECRYPTION_RESULT + keyValue + "\n" + Arrays.toString(decryptedText));
+            }
+
             System.out.println(TextsForValidation.SUCCESSFUL_BRUT_FORCE + "\n" + TextsForValidation.FAILED_BRUT_FORCE + "\n" +
                     TextsForValidation.FINISH_PROGRAM_INPUT_REQUEST);
 

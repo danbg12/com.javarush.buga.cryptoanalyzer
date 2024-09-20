@@ -63,8 +63,6 @@ public class CaesarCipher {
                             resultText[i] = ACTUAL_LANGUAGE[ACTUAL_LANGUAGE.length - Math.abs(j - CryptoAnalyzeValidation.SHIFT_KEY)];
                         }
                     }
-                } else {
-                    resultText[i] = charArray[i];
                 }
             }
         }
