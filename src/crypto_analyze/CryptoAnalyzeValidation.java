@@ -8,7 +8,6 @@ public class CryptoAnalyzeValidation {
 
     static String ACTION_WITH_FILE;
     static Integer SHIFT_KEY;
-    static String FILE_TEXT_LANGUAGE;
 
     public static void main(String[] args) {
 
@@ -26,7 +25,6 @@ public class CryptoAnalyzeValidation {
     }
 
     // C:\Users\User\Desktop\Cipher_Result_File.txt
-    // C:\Users\User\Desktop\Exemplu3.txt
     // Ask user to enter a path to the text file in console
     // After user enter the path, check the path and the file
     // After all checks this method return File type var with path
@@ -137,6 +135,7 @@ public class CryptoAnalyzeValidation {
     }
 
     // User chooses from two languages in which language is his text for the next operations
+    // Switch text languages
     static void languageInput() {
         Scanner scanner = new Scanner(System.in);
         int symbolFromConsole;
@@ -150,9 +149,9 @@ public class CryptoAnalyzeValidation {
             switch (input) {
                 case "0": System.out.println(TextsForValidation.PROGRAM_IS_FINISHED_OUTPUT);
                           System.exit(0);
-                case "1": FILE_TEXT_LANGUAGE = "Eng";
+                case "1": CaesarCipher.ACTUAL_LANGUAGE = Alphabet.ALPHABET_ENG;
                            break;
-                case "2": FILE_TEXT_LANGUAGE = "Rus";
+                case "2": CaesarCipher.ACTUAL_LANGUAGE = Alphabet.ALPHABET_RUS;
                            break;
                 default:  System.out.println(TextsForValidation.INVALID_SYMBOL_INPUT);
                           continue;

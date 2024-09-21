@@ -11,20 +11,13 @@ public class CaesarCipher {
 
     // Write all symbols from entered file into a char[] array
     static void fileFormatting(Path filePath) {
-
-        // Language initialization
-        if (CryptoAnalyzeValidation.FILE_TEXT_LANGUAGE.equals("Eng")) {
-            ACTUAL_LANGUAGE = Alphabet.ALPHABET_ENG;
-        } else if (CryptoAnalyzeValidation.FILE_TEXT_LANGUAGE.equals("Rus")) {
-            ACTUAL_LANGUAGE =Alphabet.ALPHABET_RUS;
-        }
         outPutFilePath = filePath;
 
         StringBuilder builder = new StringBuilder();
         try (BufferedReader buffer = new BufferedReader(new FileReader(filePath.toFile()))) {  // Read all symbols from the file
 
             String line;
-            while ((line = buffer.readLine()) != null) {    // All counted symbols write in char array
+            while ((line = buffer.readLine()) != null) {                                       // All counted symbols write in char array
                 builder.append(line);
             }
         } catch (IOException e) {
@@ -55,7 +48,7 @@ public class CaesarCipher {
                         } else {
                             resultText[i] = ACTUAL_LANGUAGE[Math.abs((j + CryptoAnalyzeValidation.SHIFT_KEY) - (ACTUAL_LANGUAGE.length))];
                         }
-                    // File decryption
+                    // Text decryption
                     } else if (CryptoAnalyzeValidation.ACTION_WITH_FILE.equals("Decrypt")) {
                         if (j - CryptoAnalyzeValidation.SHIFT_KEY >= 0) {
                             resultText[i] = ACTUAL_LANGUAGE[j - CryptoAnalyzeValidation.SHIFT_KEY];
