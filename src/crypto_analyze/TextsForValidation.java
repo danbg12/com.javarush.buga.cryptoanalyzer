@@ -24,7 +24,7 @@ public class TextsForValidation {
 
     public static final String FILE_ENCRYPTION_REQUEST = "Введите 1 если хотите зашифровать фаил !";
 
-    public static final String FILE_DECRYPTION_REQUEST = "Введите 2 если хотите разшифровать фаил !";
+    public static final String FILE_DECRYPTION_REQUEST = "Введите 2 если хотите расшифровать фаил !";
 
     public static final String BRUT_FORCE_REQUEST = "Введите 3 для взлома шифра методом Brute Force !";
 
@@ -36,12 +36,12 @@ public class TextsForValidation {
 
     public static final String ENCRYPTED_FILE_OUTPUT = "Шифрование текста прошла успешно ! Проверьте фаил: ";
 
-    public static final String DECRYPTED_FILE_OUTPUT = "Разшифрование текста прошла успешно ! Проверьте фаил: ";
+    public static final String DECRYPTED_FILE_OUTPUT = "Расшифрование текста прошла успешно ! Проверьте фаил: ";
 
     public static final String SUCCESSFUL_BRUT_FORCE = "Введите 1 если текстовыи фаил был успешно разшифрован !";
 
-    public static final String FAILED_BRUT_FORCE = "Введите 2 если для перебора текста следуищим ключом если текстовыи фаил не был успешно разшифрован !";
+    public static final String FAILED_BRUT_FORCE = "Введите 2 если для перебора текста следуищим ключем если текстовыи фаил не был успешно разшифрован !";
 
-    public static final String DECRYPTION_RESULT = "Результат разшифровки ключем: ";
+    public static final String DECRYPTION_RESULT = "Результат расшифровки ключем: ";
 
 }

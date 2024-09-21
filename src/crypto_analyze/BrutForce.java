@@ -46,23 +46,17 @@ public class BrutForce {
                     TextsForValidation.FINISH_PROGRAM_INPUT_REQUEST);
 
             String input = scanner.nextLine();
-            if (input.equals("0")) {
-                System.out.println(TextsForValidation.PROGRAM_IS_FINISHED_OUTPUT);  // Finish the program if user entered exit
-                System.exit(0);
-            } else if (input.trim().isEmpty()) {                                    // Delete backspaces from entered data
-                System.out.println(TextsForValidation.EMPTY_INPUT);                 // Verify if scanner is empty
-                continue;
+            switch (input) {
+                case "0": System.out.println(TextsForValidation.PROGRAM_IS_FINISHED_OUTPUT);
+                    System.exit(0);
+                case "1": CaesarCipher.resultFileOutput(decryptedText);
+                    break;
+                case "2": keyValue++;
+                          continue;
+                default:  System.out.println(TextsForValidation.INVALID_SYMBOL_INPUT);
+                    continue;
             }
-
-            if (input.equals("1")) {
-                CaesarCipher.resultFileOutput(decryptedText);            // If user entered 1 write data from array to output file
-                break;
-            } else if (input.equals("2")) {                              // If user entered 2 restart the method with next key
-                keyValue++;
-                continue;
-            } else {
-                System.out.println(TextsForValidation.INVALID_SYMBOL_INPUT);
-            }
+            break;
         }
     }
 }

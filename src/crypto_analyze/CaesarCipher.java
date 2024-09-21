@@ -79,15 +79,13 @@ public class CaesarCipher {
         }
 
         // Show to user operation result
-        if (CryptoAnalyzeValidation.ACTION_WITH_FILE.equals("Encrypt")) {
-            System.out.println(TextsForValidation.ENCRYPTED_FILE_OUTPUT + outPutFilePath.toString());
-            System.out.println();
-        } else if (CryptoAnalyzeValidation.ACTION_WITH_FILE.equals("Decrypt")) {
-            System.out.println(TextsForValidation.DECRYPTED_FILE_OUTPUT + outPutFilePath.toString());
-            System.out.println();
-        } else if (CryptoAnalyzeValidation.ACTION_WITH_FILE.equals("Hack")) {
-            System.out.println(TextsForValidation.DECRYPTED_FILE_OUTPUT + outPutFilePath.toString());
-            System.out.println();
+        switch (CryptoAnalyzeValidation.ACTION_WITH_FILE){
+            case "Encrypt": System.out.println(TextsForValidation.ENCRYPTED_FILE_OUTPUT + outPutFilePath.toString());
+                            System.out.println();
+                            break;
+            case "Decrypt":
+            case "Hack": System.out.println(TextsForValidation.DECRYPTED_FILE_OUTPUT + outPutFilePath.toString());
+                         System.out.println();
         }
     }
 }
